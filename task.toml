@@ -1,0 +1,39 @@
+schema_version = "1.4"
+artifacts = ["/root/results/solver.py"]
+
+[task]
+name = "turing/autotransformer-railway-diagnosis"
+description = "Write a program that finds what is wrong with a 2x25 kV autotransformer-fed railway line from rms readings taken at several operating points: raised conductor impedances and rail leakage, autotransformers out of service, voltage-sensor offsets, current-meter gain errors and gross readings."
+version = "1.0.0"
+keywords = ["electrical-engineering", "railway-electrification", "autotransformer-feeding", "fault-diagnosis", "inverse-problems", "robust-estimation", "rail-leakage"]
+
+[metadata]
+domain = "engineering-sciences"
+category = "electrical-engineering"
+subcategory = "railway-electrification"
+reward_type = "binary"
+source = "Written by PhD annotators"
+public_overlap = "None"
+
+
+[verifier]
+timeout_sec = 28800
+environment_mode = "separate"
+network_mode = "no-network"
+
+
+[verifier.environment]
+network_mode = "no-network"
+cpus = 2
+memory_mb = 4096
+
+
+[agent]
+timeout_sec = 18000
+network_mode = "public"
+
+[environment]
+cpus = 2
+memory_mb = 4096
+storage_mb = 10240
+network_mode = "public"

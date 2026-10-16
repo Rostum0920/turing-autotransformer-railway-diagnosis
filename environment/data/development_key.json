@@ -1,0 +1,87 @@
+{
+ "lines": {
+  "L1": {
+   "contact_wire_increases": {
+    "4": 0.620078
+   },
+   "feeder_increases": {
+    "13": 0.858187
+   },
+   "rail_increases": {
+    "11": 1.382692
+   },
+   "rail_leakage_increases": {
+    "10": 3.995914,
+    "13": 2.426031
+   },
+   "autotransformers_out": [
+    13
+   ],
+   "voltage_sensor_offsets": {
+    "0": 43.418487,
+    "9": -45.796688
+   },
+   "current_meter_gains": {
+    "23": -9.185
+   },
+   "bad_measurements": [
+    [
+     0,
+     24
+    ],
+    [
+     1,
+     1
+    ],
+    [
+     2,
+     19
+    ],
+    [
+     7,
+     31
+    ]
+   ]
+  },
+  "L2": {
+   "contact_wire_increases": {
+    "6": 0.552809,
+    "15": 0.700251
+   },
+   "feeder_increases": {
+    "4": 0.533531,
+    "5": 0.723539,
+    "12": 0.668638
+   },
+   "rail_increases": {
+    "14": 0.537164
+   },
+   "rail_leakage_increases": {
+    "14": 2.775418
+   },
+   "autotransformers_out": [
+    16
+   ],
+   "voltage_sensor_offsets": {
+    "13": -58.994316
+   },
+   "current_meter_gains": {
+    "21": -9.4771
+   },
+   "bad_measurements": [
+    [
+     0,
+     9
+    ],
+    [
+     2,
+     4
+    ],
+    [
+     4,
+     15
+    ]
+   ]
+  }
+ }
+}
