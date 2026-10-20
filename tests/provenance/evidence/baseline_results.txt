@@ -1,0 +1,20 @@
+Baseline solvers run on the shipped lines (author-side runs of the final data; one run each, 2 CPUs).
+greedy = forward selection of the best single error with exact refits, then backward elimination (base_greedy_solver.py);
+beam   = class-diverse forward beam, then pruning, same-class swaps and pair additions (base_beam_solver.py).
+Both use the exact coupled model of the instruction and are author-side baselines (their evidence threshold is 40, a screening value). A line passes only if the diagnosis meets every requirement of the instruction.
+
+base_greedy  DEV  2/2 lines pass
+base_greedy  H1   3/4 lines pass  FAIL: L1: bad_measurements, contact_wire_increases, feeder_increases, voltage_sensor_offsets
+base_greedy  H2   1/4 lines pass  FAIL: L1: bad_measurements, feeder_increases, rail_increases, rail_leakage_increases; L3: autotransformers_out, bad_measurements, contact_wire_increases, current_meter_gains, feeder_increases, rail_increases, rail_leakage_increases, voltage_sensor_offsets; L4: bad_measurements, rail_increases, rail_leakage_increases
+base_greedy  H3   4/4 lines pass
+base_beam    DEV  2/2 lines pass
+base_beam    H1   3/4 lines pass  FAIL: L1: bad_measurements, contact_wire_increases, feeder_increases, voltage_sensor_offsets
+base_beam    H2   2/4 lines pass  FAIL: L3: autotransformers_out, bad_measurements, contact_wire_increases, current_meter_gains, feeder_increases, rail_increases, rail_leakage_increases, voltage_sensor_offsets; L4: bad_measurements, rail_increases, rail_leakage_increases
+base_beam    H3   4/4 lines pass
+reference        DEV  2/2 lines pass
+reference        H1   4/4 lines pass
+reference        H2   4/4 lines pass
+reference        H3   4/4 lines pass
+
+private lines passed (of 12): base_greedy 8, base_beam 9, reference 12
+private campaigns passed (of 3): base_greedy 1, base_beam 1, reference 3
